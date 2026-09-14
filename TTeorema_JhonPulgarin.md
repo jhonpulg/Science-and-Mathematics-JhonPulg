@@ -253,7 +253,6 @@ escalable frente a cualquier configuración arquitectónica.
 -------------------------------------------------------------------------------------------------------------------------------
 ## 9. ANTECEDENTES HISTÓRICOS Y TRABAJO RELACIONADO
 
-# Antecedentes Históricos y Trabajo Relacionado
 
 El presente modelo de indexación aborda de manera formal un fenómeno identificado en diversas 
 disciplinas científicas a lo largo de la historia. Aunque la lógica subyacente de la 
@@ -289,7 +288,6 @@ mapear la realidad física.
 
 ### 10. VERIFICACIÓN FORMAL DE MÉTODOS (PROBADOR DE TEOREMAS VÍA SOLUCIONADOR SMT)
 
-### VERIFICACIÓN FORMAL DE MÉTODOS (SOLUCIONADOR SMT)
 
 La propiedad matemática de simetría de la fórmula se demuestra formalmente para el 
 universo infinito de los números enteros. En lugar de depender únicamente de simulaciones 
