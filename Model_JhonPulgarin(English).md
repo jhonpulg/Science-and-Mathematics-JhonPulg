@@ -143,11 +143,6 @@ $$O = 1 - 1 = 0$$
 ### Answer
 They are separated by **0 intermediate years**. Year 1 A.D. is immediately consecutive to year 1 B.C.
 
-### Real Historical Adjustment
-The mathematical formula yields a theoretical result of 1 intermediate year (which would correspond to year 0). However, in the Christian historical and chronological record **year 0 does not exist**. Year 1 A.D. follows immediately after year 1 B.C.
-
-Therefore, in historical reality:
-$$O = 0$$
 
 ### Answer
 In chronological reality, **0 full years** separate year 1 B.C. from year 1 A.D.
