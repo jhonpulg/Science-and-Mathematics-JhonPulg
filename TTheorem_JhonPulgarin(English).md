@@ -31,35 +31,42 @@ Where:
 - | | = Absolute value
 - -1 = Because when subtracting indices you count one extreme, minus one corrects everything
 
-### 3. THEOREM STATEMENT
+### 3. MODEL STATEMENT
 
-Given two different positions A and B with indices
-index(A) and index(B), the number of elements
-strictly intermediate between them is equal to:
+Given any two positions $A$ and $B$ mapped within a sequential discrete space, 
+with indexed positions denoted as $\text{index}(A)$ and $\text{index}(B)$, the 
+number of strictly intermediate elements (excluding both endpoints) is defined 
+by the ordering function:
 
-O = |index(A) - index(B)| - 1
+$$O = |\text{index}(A) - \text{index}(B)| - 1$$
 
-Where O are the empty or intermediate spaces between A and B.
+Where $O$ represents the cardinality of the subset of internal elements that 
+separate $A$ from $B$.
 
-### 4. FORMAL PROOF (QED)
+### 4. FORMAL PROOF
 
-1. The absolute distance between indices is:
-   D = |index(A) - index(B)|
+1. The indexed transition distance between both positions is defined by the 
+   absolute metric: $D = |\text{index}(A) - \text{index}(B)|$.
+2. By definition of discrete distance, the value $D$ counts all the steps 
+   required to reach the final position, excluding the origin $A$ but 
+   including the destination $B$.
+3. To exclusively isolate the open interval $(\text{index}(A), \text{index}(B))$, 
+   the destination element ($B$) must be removed from the total count.
+4. Substituting the exclusion constraint into the original metric yields: 
+   $O = D - 1 = |\text{index}(A) - \text{index}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
-2. D includes the distance from A to B inclusive.
+### 5. DERIVED MODEL PROPERTIES
 
-3. To count ONLY the interior, we must exclude
-   the extremes A and B. We subtract 1.
+* **Contiguity Condition:** If $A$ and $B$ are adjacent consecutive elements, 
+  then $O = 1 - 1 = 0$ (zero intermediate elements).
+* **Identity of Vacuity:** If $A = B$, then $O = 0 - 1 = -1$, which formalizes a 
+  nonexistent or null interval by discrete topological definition.
+* **Bounded Non-Negativity:** $O \geq 0$ for any pair of distinct, non-consecutive 
+  positions within the indexed space.
+* **Directional Symmetry:** The use of the absolute value guarantees that 
+  $O(A,B) = O(B,A)$, proving that the count is invariant with respect to the 
+  direction of navigation.
 
-4. It remains: O = D - 1 = |index(A) - index(B)| - 1
-
-### 5. QED - Quod Erat Demonstrandum (as was to be demonstrated)
-Proven properties:
-- If A and B are consecutive: O = 0
-- If A = B: O = -1 (empty interval by definition)
-- O >= 0 for distinct non-consecutive positions
-- Symmetric: O(A,B) = O(B,A) thanks to absolute value
-- Works in any order.
 
 ## 6. COMPLETE EXAMPLES
 
