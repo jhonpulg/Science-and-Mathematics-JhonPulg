@@ -260,43 +260,37 @@ The theorem's core mathematical properties—symmetry, contiguity, and identity�
 
 
 ```python
-import random
-
-def calculate_intermediate_elements(index_a, index_b):
-    return abs(index_a - index_b) - 1
-
-def execute_case_studies():
-    print("====================================================")
-    print("  CASE STUDY VALIDATION - JHON PULGARIN THEOREM")
-    print("====================================================\n")
-    print(f"[Case 1] Elevator (P2 -> S1): {calculate_intermediate_elements(2, 0)} intermediate floor.")
-    print(f"[Case 2] Pots in a row (1 -> 5): {calculate_intermediate_elements(1, 5)} intermediate pots.")
-    print(f"[Case 3] Eras (1 BC -> 1 AD): {calculate_intermediate_elements(0, 1)} intermediate years.\n")
-
-def run_empirical_simulation(num_simulations=10000):
+def run_formal_verification_smt():
     print("----------------------------------------------------")
-    print(f"  RUNNING EMPIRICAL TEST ({num_simulations} ITERATIONS)")
-    print("----------------------------------------------------")
-    for _ in range(num_simulations):
-        a, b = random.randint(-100000, 100000), random.randint(-100000, 100000)
-        assert calculate_intermediate_elements(a, b) == calculate_intermediate_elements(b, a)
-    print("✅ EMPIRICAL TEST SUCCESSFUL!\n")
-
-def run_smt_formal_verification():
-    print("----------------------------------------------------")
-    print("  RUNNING FORMAL VERIFICATION (THEOREMS PROVER - Z3)")
+    print("  REAL FORMAL VERIFICATION (Z3 SMT SOLVER)")
     print("----------------------------------------------------")
     try:
         from z3 import Solver, Int, Abs as z3_abs, unsat
-        a, b = Int('a'), Int('b')
-        print("✅ FORMAL PROOF: Properties hold for all INFINITE integers.\n")
+        
+        solver = Solver()
+        a = Int('a')
+        b = Int('b')
+        
+        # Define the mathematical formula for Z3
+        formula_a_b = z3_abs(a - b) - 1
+        formula_b_a = z3_abs(b - a) - 1
+        
+        # Ask Z3 to find a COUNTEREXAMPLE:
+        # "Find any case where formula_a_b is NOT EQUAL to formula_b_a"
+        solver.add(formula_a_b != formula_b_a)
+        
+        # If the result is UNSAT (unsatisfiable), it means NO counterexample exists
+        if solver.check() == unsat:
+            print("✅ FORMAL VERIFICATION SUCCESSFUL: Z3 mathematically proved")
+            print("   that the symmetry property holds for the infinity of integers.")
+        else:
+            print("❌ A counterexample was found (the formula failed).")
+            
     except ImportError:
-        print("ℹ️  Z3 Solver is not installed. Run `pip install z3-solver` to enable.\n")
+        print("ℹ️ Run `pip install z3-solver` to execute the real mathematical verification.")
 
-if __name__ == "__main__":
-    execute_case_studies()
-    run_empirical_simulation()
-    run_smt_formal_verification()
+run_formal_verification_smt()
+
 ```
 
 ---
