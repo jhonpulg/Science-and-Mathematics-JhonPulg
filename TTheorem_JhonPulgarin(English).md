@@ -224,7 +224,6 @@ architectural layout.
 
 ### 9. HISTORICAL BACKGROUND AND RELATED WORK
 
-# Historical Background and Related Work
 
 The present indexing model formally addresses a phenomenon identified across various scientific 
 disciplines throughout history. Although the underlying logic of open interval cardinality 
@@ -256,7 +255,16 @@ numerically as year 0, validating the need to implement continuous indices to ma
 
 ### 10. FORMAL VERIFICATION OF METHODS (THEOREM PROVER VIA SMT SOLVER)
 
-The theorem's core mathematical properties—symmetry, contiguity, and identity—are formally verified across the infinite universe of integers. Rather than relying on empirical simulations or random sampling prone to missing edge cases, the verification framework incorporates an automated Theorem Prover powered by Microsoft Research's Z3 SMT Solver. This engine algebraically evaluates the formula's constraints, proving that no mathematical counterexample exists and establishing absolute certainty for the entire model.
+
+The mathematical property of symmetry in the formula is formally proven for the infinite 
+universe of integers. Instead of relying solely on empirical simulations or random 
+sampling prone to missing edge cases, the methodological framework incorporates an 
+Automated Theorem Prover powered by the Z3 SMT solver from Microsoft Research. 
+
+This engine algebraically evaluates the constraints, proving that no mathematical 
+counterexample exists where the direction of travel affects the outcome, thereby 
+establishing absolute certainty for the indexing model.
+
 
 
 ```python
