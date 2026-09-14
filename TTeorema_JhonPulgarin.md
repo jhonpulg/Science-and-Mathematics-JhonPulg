@@ -289,7 +289,18 @@ mapear la realidad física.
 
 ### 10. VERIFICACIÓN FORMAL DE MÉTODOS (PROBADOR DE TEOREMAS VÍA SOLUCIONADOR SMT)
 
-Las propiedades matemáticas fundamentales del teorema —simetría, contigüidad e identidad— se demuestran formalmente para el universo infinito de los números enteros. En lugar de depender de simulaciones empíricas o muestreos aleatorios propensos a pasar por alto casos límite, el marco metodológico incorpora un Probador Automatizado de Teoremas impulsado por el solucionador SMT Z3 de Microsoft Research. Este motor evalúa algebraicamente las restricciones de la fórmula, demostrando que no existe ningún contraejemplo matemático y estableciendo una certeza absoluta para todo el modelo.
+### VERIFICACIÓN FORMAL DE MÉTODOS (SOLUCIONADOR SMT)
+
+La propiedad matemática de simetría de la fórmula se demuestra formalmente para el 
+universo infinito de los números enteros. En lugar de depender únicamente de simulaciones 
+empíricas o muestreos aleatorios propensos a omitir casos límite, el marco metodológico 
+incorpora un Probador Automatizado de Teoremas impulsado por el solucionador SMT Z3 de 
+Microsoft Research. 
+
+Este motor evalúa algebraicamente las restricciones, demostrando que no existe ningún 
+contraejemplo matemático donde la dirección del recorrido afecte el resultado, estableciendo 
+una certeza absoluta para el modelo de indexación.
+
 
 ```python
 def ejecutar_verificacion_formal_smt():
