@@ -207,13 +207,16 @@ print(f"Real intermediate years separating them: {intermediate_years}\n")
 ```
 ### 7. APPLICATIONS OF THE THEOREM
 
-1.  Data structures and Arrays
-2.  Linked lists
-3.  Open interval theory and sets
-4.  Combinatorial counting and Sequence analysis
-5.  Programming (solves Fencepost Error)
-6.  Time and space organization
-7.  Civil Engineering and Architecture
+### 7. APPLICATIONS OF THE METHOD
+
+* **Data Structures and Arrays** (calculation of logical distances and offsets)
+* **Node Management** in linked lists and linear structures
+* **Open Interval Theory** and cardinality of discrete sets
+* **Combinatorics Counting** and numerical sequence analysis
+* **Software Development** (native solution to the *Fencepost Error*)
+* **Chronology Systems** and time organization without Year 0
+* **Civil Engineering and Architecture** (logical elevator mapping without Floor 0)
+
 
 ### 8. FINAL CONCLUSION
 
