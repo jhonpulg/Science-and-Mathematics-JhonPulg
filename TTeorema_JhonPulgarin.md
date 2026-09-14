@@ -253,16 +253,38 @@ escalable frente a cualquier configuración arquitectónica.
 -------------------------------------------------------------------------------------------------------------------------------
 ## 9. ANTECEDENTES HISTÓRICOS Y TRABAJO RELACIONADO
 
-El **Teorema de Jhon Pulgarin** aborda de manera matemática un fenómeno que ha sido identificado en diversas disciplinas científicas a lo largo de la historia. Aunque la fórmula subyacente de la cardinalidad de intervalos abiertos es universal, su aplicación sistemática se conecta directamente con los siguientes hitos de la ciencia y la tecnología:
+# Antecedentes Históricos y Trabajo Relacionado
+
+El presente modelo de indexación aborda de manera formal un fenómeno identificado en diversas 
+disciplinas científicas a lo largo de la historia. Aunque la lógica subyacente de la 
+cardinalidad de intervalos abiertos es universal, su aplicación sistemática se conecta 
+directamente con los siguientes hitos de la ciencia y la tecnología:
 
 ### A. Matemáticas Discretas: Cardinalidad de Intervalos Abiertos
-En la teoría de conjuntos y la matemática discreta, el cálculo de elementos estrictamente internos entre dos límites enteros $A$ y $B$ (donde $A < B$) se define formalmente como la cardinalidad de un **intervalo abierto** $(A, B)$. El uso del valor absoluto $|\text{índice}(A) - \text{índice}(B)| - 1$ extiende esta noción haciéndola simétrica y aplicable independientemente de la dirección del recorrido vectorizado, un principio estudiado en la topología de espacios discretos.
+En la teoría de conjuntos y la combinatoria enumerativa, el cálculo de elementos estrictamente 
+internos entre dos límites enteros $A$ y $B$ (donde $A < B$) se define formalmente como la 
+cardinalidad de un intervalo abierto $(A, B)$. El uso del valor absoluto 
+$|\text{índice}(A) - \text{índice}(B)| - 1$ extiende esta noción haciéndola simétrica y 
+aplicable independientemente de la dirección del recorrido vectorizado, eliminando las 
+dependencias del signo en la medición de distancias discretas.
 
 ### B. Ciencias de la Computación: Edsger Dijkstra y el "Fencepost Error"
-En la ingeniería de software, el núcleo de este teorema resuelve el clásico **Error del Poste de Cerca** (*Fencepost Error* u *Off-by-one Error*). En la década de 1970, el renombrado científico de la computación **Edsger Dijkstra** formalizó la necesidad de la indexación basada en cero (empezar a contar desde 0) para que las operaciones de rango e intervalos en las memorias de las computadoras fuesen consistentes y no requirieran correcciones artificiales al interactuar con el mundo físico.
+En la ingeniería de software, el núcleo de esta abstracción resuelve el clásico Error del 
+Poste de Cerca (*Fencepost Error* u *Off-by-one Error*). En la década de 1970, el científico 
+de la computación Edsger Dijkstra formalizó las ventajas de la indexación basada en cero para 
+garantizar que las operaciones de rango e intervalos en las memorias de las computadoras 
+fuesen consistentes, evitando correcciones aritméticas manuales al iterar sobre subconjuntos 
+de datos.
 
 ### C. Astronomía: Jacques Cassini y la Introducción del Año 0
-El desfase analizado en el *Problema de las Eras (1 a.C. y 1 d.C.)* fue descubierto físicamente por el astrónomo francés **Jacques Cassini en 1740**. Cassini identificó que los cálculos matemáticos para predecir eclipses históricos fallaban por un factor de 1 año debido a la inexistencia del año 0 en el calendario gregoriano y juliano. Para solucionarlo, introdujo la escala del "Año Astronómico", donde el año 1 a.C. se denota numéricamente como el año 0, validando la necesidad de los índices continuos que propone este teorema.
+El desfase analizado en la transición de escalas discontinuas (como el paso directo de 1 a.C. 
+a 1 d.C.) fue abordado físicamente por el astrónomo francés Jacques Cassini en 1740. Cassini 
+identificó que los cálculos matemáticos para predecir eclipses históricos fallaban por un 
+factor de un año debido a la inexistencia del año 0 en los calendarios tradicionales. Para 
+solucionarlo, introdujo la escala del "Año Astronómico", donde el año 1 a.C. se denota 
+numéricamente como el año 0, validando la necesidad de implementar índices continuos para 
+mapear la realidad física.
+
 
 
 ### 10. VERIFICACIÓN FORMAL DE MÉTODOS (PROBADOR DE TEOREMAS VÍA SOLUCIONADOR SMT)
