@@ -292,57 +292,35 @@ mapear la realidad física.
 Las propiedades matemáticas fundamentales del teorema —simetría, contigüidad e identidad— se demuestran formalmente para el universo infinito de los números enteros. En lugar de depender de simulaciones empíricas o muestreos aleatorios propensos a pasar por alto casos límite, el marco metodológico incorpora un Probador Automatizado de Teoremas impulsado por el solucionador SMT Z3 de Microsoft Research. Este motor evalúa algebraicamente las restricciones de la fórmula, demostrando que no existe ningún contraejemplo matemático y estableciendo una certeza absoluta para todo el modelo.
 
 ```python
-import random
-
-def calcular_elementos_intermedios(indice_a, indice_b):
-    """
-    Implementación oficial de la fórmula del Teorema de Jhon Pulgarin:
-    O = |índice(A) - índice(B)| - 1
-    """
-    return abs(indice_a - indice_b) - 1
-
-def ejecutar_casos_estudio():
-    print("====================================================")
-    print("  VALIDACIÓN DE CASOS DE ESTUDIO - TEOREMA DE JHON PULGARIN")
-    print("====================================================\n")
-    print(f"[Caso 1] Ascensor (P2 -> S1): {calcular_elementos_intermedios(2, 0)} piso intermedio.")
-    print(f"[Caso 2] Potes en fila (1 -> 5): {calcular_elementos_intermedios(1, 5)} potes intermedios.")
-    print(f"[Caso 3] Eras (1 a.C. -> 1 d.C.): {calcular_elementos_intermedios(0, 1)} años intermedios.\n")
-
-def ejecutar_simulacion_empirica(num_simulaciones=10000):
-    print("----------------------------------------------------")
-    print(f"  EJECUTANDO PRUEBA EMPÍRICA ({num_simulaciones} ITERACIONES)")
-    print("----------------------------------------------------")
-    for _ in range(num_simulaciones):
-        # Generar dos índices aleatorios en un rango amplio de la recta numérica
-        a = random.randint(-100000, 100000)
-        b = random.randint(-100000, 100000)
-        
-        # Comprobar propiedad de simetría elemental
-        assert calcular_elementos_intermedios(a, b) == calcular_elementos_intermedios(b, a)
-    print("✅ ¡PRUEBA EMPÍRICA EXITOSA!\n")
-
 def ejecutar_verificacion_formal_smt():
     print("----------------------------------------------------")
-    print("  VERIFICACIÓN FORMAL (PROBADOR DE TEOREMAS - Z3)")
+    print("  VERIFICACIÓN FORMAL REAL (SOLVER SMT Z3)")
     print("----------------------------------------------------")
     try:
         from z3 import Solver, Int, Abs as z3_abs, unsat
         
-        # Definir variables enteras simbólicas para el infinito matemático
+        solver = Solver()
         a = Int('a')
         b = Int('b')
         
-        # Si la librería Z3 está disponible, demuestra las propiedades lógicas absolutas
-        print("✅ DEMOSTRACIÓN FORMAL: Las propiedades se cumplen para todos los enteros INFINITOS.\n")
+        # Definimos la fórmula matemática para Z3
+        formula_a_b = z3_abs(a - b) - 1
+        formula_b_a = z3_abs(b - a) - 1
+        
+        # Le pedimos a Z3 que busque un CONTRAEJEMPLO: 
+        # "Busca algún caso donde formula_a_b sea DIFERENTE a formula_b_a"
+        solver.add(formula_a_b != formula_b_a)
+        
+        # Si el resultado es UNSAT (insatisfactible), significa que NO EXISTE ningún contraejemplo
+        if solver.check() == unsat:
+            print("✅ VERIFICACIÓN FORMAL EXITOSA: Z3 demostró matemáticamente")
+            print("   que la propiedad de simetría se cumple para el infinito de los enteros.")
+        else:
+            print("❌ Se encontró un contraejemplo (la fórmula falló).")
+            
     except ImportError:
-        print("ℹ️  El solucionador SMT Z3 no está instalado. Ejecuta `pip install z3-solver` para activarlo.\n")
-
-if __name__ == "__main__":
-    ejecutar_casos_estudio()
-    ejecutar_simulacion_empirica()
-    ejecutar_verificacion_formal_smt()
-
+        print("ℹ️ Ejecuta `pip install z3-solver` para correr la verificación matemática real.")
+ejecutar_verificacion_formal_smt()
 ```
 
 
