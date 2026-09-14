@@ -56,35 +56,38 @@ Donde:
 
 ### 3. ENUNCIADO DEL MODELO
 
-Dadas dos posiciones distintas A y B con indices
-indice(A) e indice(B), el numero de elementos
-estrictamente intermedios entre ellas es igual a:
+Dadas dos posiciones cualesquiera $A$ y $B$ mapeadas en un espacio discreto 
+secuencial, con posiciones indexadas como $\text{índice}(A)$ e $\text{índice}(B)$, 
+el número de elementos estrictamente intermedios (excluyendo ambos extremos) 
+se define mediante la función de ordenamiento:
 
-O = |indice(A) - indice(B)| - 1
+$$O = |\text{índice}(A) - \text{índice}(B)| - 1$$
 
-Donde O son los espacios vacíos o intermedios entre A y B.
+Donde $O$ representa la cardinalidad del subconjunto de elementos internos 
+que separan a $A$ de $B$.
 
-### 4. DEMOSTRACIÓN FORMAL (QED)
+### 4. DEMOSTRACIÓN FORMAL
 
-1. La distancia absoluta entre indices es:
-   D = |indice(A) - indice(B)|
+1. La distancia de transición indexada entre ambas posiciones se define por la 
+   métrica absoluta: $D = |\text{índice}(A) - \text{índice}(B)|$.
+2. Por definición de distancia discreta, el valor $D$ contabiliza todos los pasos 
+   necesarios para alcanzar la posición final, excluyendo el origen $A$ pero 
+   incluyendo el destino $B$.
+3. Para aislar exclusivamente el intervalo abierto $(\text{índice}(A), \text{índice}(B))$, 
+   se debe remover el elemento de destino ($B$) del conteo total.
+4. Sustituyendo la restricción de exclusión en la métrica original se obtiene: 
+   $O = D - 1 = |\text{índice}(A) - \text{índice}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
-2. D incluye la distancia desde A hasta B inclusive.
+### 5. PROPIEDADES DERIVADAS DEL MODELO
 
-3. Para contar SOLO el interior, debemos excluir
-   los extremos A y B. Restamos 1.
-
-4. Queda: O = D - 1 = |indice(A) - indice(B)| - 1
-
-
-
-### 5. QED - Quod Erat Demonstrandum (como se queria demostrar)
-Propiedades demostradas:
-- Si A y B son consecutivos: O = 0
-- Si A = B: O = -1 (intervalo vacio por definicion)
-- O >= 0 para posiciones distintas no consecutivas
-- Simetrico: O(A,B) = O(B,A) gracias al valor absoluto
-- Funciona en cualquier orden.
+* **Condición de Contigüidad:** Si $A$ y $B$ son elementos adyacentes consecutivos, 
+  entonces $O = 1 - 1 = 0$ (cero elementos intermedios).
+* **Identidad de Vacuidad:** Si $A = B$, entonces $O = 0 - 1 = -1$, lo que formaliza un 
+  intervalo inexistente o nulo por definición topológica discreta.
+* **No Negatividad Acotada:** $O \geq 0$ para cualquier par de posiciones distintas y no 
+  consecutivas en el espacio indexado.
+* **Simetría Direccional:** El uso del valor absoluto garantiza que $O(A,B) = O(B,A)$, 
+  demostrando que el conteo es invariante respecto al sentido de la navegación.
 
 ## 6. EJEMPLOS COMPLETOS
 
