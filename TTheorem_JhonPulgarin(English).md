@@ -1,6 +1,7 @@
-# Jhon Pulgarin's Theorem and the spatial discontinuity of the architectural zero
+# The Jhon Pulgarin Model: Spatial Discontinuity
 
-**Treatise on Spatial Discontinuity and the Architectural Zero**
+**A Treatise on Spatial Discontinuity and the Architectural Zero**
+
 
 ---
 
