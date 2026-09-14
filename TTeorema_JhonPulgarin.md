@@ -237,8 +237,16 @@ print(f"Años intermedios reales que los separan: {anos_intermedios}\n")
 
 ### 8. CONCLUSION FINAL
 
-El Teorema de Jhon Pulgarin establece un puente definitivo entre las matemáticas continuas abstractas y las restricciones discretas de los entornos físicos y digitales al formalizar la relación universal O = | índice(A) - índice(B) | - 1. Su aplicación elimina de raíz las anomalías en límites y los desfases en la asignación de memoria. La transición de pruebas probabilísticas tradicionales hacia la verificación automatizada por SMT eleva este marco al rango de certeza matemática absoluta, ofreciendo un modelo infinitamente escalable para la optimización de la indexación y la navegación espacial.
+# Conclusión Técnica: Navegación Espacial mediante Abstracción de Índices
 
+La formalización del cálculo mediante $O = |\text{índice}(A) - \text{índice}(B)| - 1$ desacopla con 
+éxito la lógica del software de las irregularidades de la nomenclatura física. Al mapear un 
+espacio discontinuo en un arreglo indexado secuencialmente, se elimina la necesidad de 
+condicionales complejos (`if/else`) para manejar excepciones como la ausencia del piso cero. 
+
+Esto transforma un problema de aritmética espacial en una operación de tiempo constante 
+$O(1)$ sobre índices, garantizando un modelo de navegación robusto, predecible y fácilmente 
+escalable frente a cualquier configuración arquitectónica.
 
 
 
