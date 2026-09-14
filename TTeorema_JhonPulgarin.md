@@ -1,6 +1,7 @@
-# Teorema de Jhon Pulgarin - Discontinuidad Espacial
+# El Modelo de Jhon Pulgarin: Discontinuidad Espacial
 
 **Tratado sobre la Discontinuidad Espacial y el Cero Arquitectónico**
+
 
 ---
 
@@ -53,7 +54,7 @@ Donde:
 - | | = Valor absoluto
 - -1 = Porque al restar índices cuentas un extremo, menos uno lo corrige todo
 
-### 3. ENUNCIADO DEL TEOREMA
+### 3. ENUNCIADO DEL MODELO
 
 Dadas dos posiciones distintas A y B con indices
 indice(A) e indice(B), el numero de elementos
@@ -225,15 +226,17 @@ print(f"Índice Destino (1 d.C.): {ano_destino_idx}")
 print(f"Años intermedios reales que los separan: {anos_intermedios}\n")
 
 ```
-### 7. APLICACIONES DEL TEOREMA
+### 7. APLICACIONES DEL MÉTODO
 
-1.  Estructuras de datos y Arrays
-2.  Listas enlazadas
-3.  Teoria de intervalos abiertos y conjuntos
-4.  Conteo combinatorio y Analisis de secuencias
-5.  Programacion (soluciona Fencepost Error)
-6.  Organizacion de tiempo y espacio
-7.  Ingenieria Civil y Arquitectura
+
+* **Estructuras de Datos y Arrays** (cálculo de distancias lógicas y offsets)
+* **Gestión de Nodos** en listas enlazadas y estructuras lineales
+* **Teoría de Intervalos Abiertos** y cardinalidad de conjuntos discretos
+* **Conteo Combinatorio** y análisis de secuencias numéricas
+* **Desarrollo de Software** (solución nativa al *Fencepost Error*)
+* **Sistemas de Cronología** y organización del tiempo sin Año 0
+* **Ingeniería Civil y Arquitectura** (mapeo lógico de ascensores sin Piso 0)
+
 
 ### 8. CONCLUSION FINAL
 
