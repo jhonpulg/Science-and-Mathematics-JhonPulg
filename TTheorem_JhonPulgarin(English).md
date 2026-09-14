@@ -224,11 +224,35 @@ architectural layout.
 
 ### 9. HISTORICAL BACKGROUND AND RELATED WORK
 
-The theorem formalizes systemic discrepancies across disciplines:
-* **Discrete Mathematics:** Maps strictly internal elements to open intervals (A, B) with bidirectional symmetry using standard absolute values.
-* **Computer Science:** Resolves physical-to-digital mapping underlying fencepost/off-by-one errors dating back to Dijkstra's zero-based indexing.
-* **Astronomy:** Aligns with Jacques Cassini's 1740 introduction of astronomical year numbering (year zero) to correct eclipse prediction gaps.
-* **Low-Level Memory Optimization:** Translates structural gaps directly into pointer arithmetic without index overheads in modern compilers.
+# Historical Background and Related Work
+
+The present indexing model formally addresses a phenomenon identified across various scientific 
+disciplines throughout history. Although the underlying logic of open interval cardinality 
+is universal, its systematic application connects directly with the following milestones 
+in science and technology:
+
+### A. Discrete Mathematics: Open Interval Cardinality
+In set theory and enumerative combinatorics, the calculation of strictly internal elements 
+between two integer bounds $A$ and $B$ (where $A < B$) is formally defined as the cardinality 
+of an open interval $(A, B)$. The use of the absolute value $|\text{index}(A) - \text{index}(B)| - 1$ 
+extends this notion, making it symmetrical and applicable regardless of the direction of the 
+vectorized traversal, thereby eliminating sign dependencies in discrete distance measurement.
+
+### B. Computer Science: Edsger Dijkstra and the "Fencepost Error"
+In software engineering, the core of this abstraction resolves the classic Fencepost Error 
+(or Off-by-one Error). In the 1970s, computer scientist Edsger Dijkstra formalized the 
+advantages of zero-based indexing to ensure that range and interval operations in computer 
+memory remained consistent, avoiding manual arithmetic corrections when iterating over data 
+subsets.
+
+### C. Astronomy: Jacques Cassini and the Introduction of Year 0
+The discrepancy analyzed in the transition of discontinuous scales (such as the direct shift 
+from 1 BC to 1 AD) was physically addressed by the French astronomer Jacques Cassini in 1740. 
+Cassini identified that mathematical calculations for predicting historical eclipses failed 
+by a factor of one year due to the nonexistence of Year 0 in traditional calendars. To 
+resolve this, he introduced the "Astronomical Year Numbering" scale, where 1 BC is denoted 
+numerically as year 0, validating the need to implement continuous indices to map physical reality.
+
 
 ### 10. FORMAL VERIFICATION OF METHODS (THEOREM PROVER VIA SMT SOLVER)
 
