@@ -164,11 +164,6 @@ $$O = 1 - 1 = 0$$
 ### Respuesta
 Los separan **0 años intermedios**. El año 1 d.C. es inmediatamente consecutivo al año 1 a.C.
 
-### Ajuste Histórico Real
-La fórmula matemática arroja un resultado teórico de 1 año intermedio (que correspondería al año 0). Sin embargo, en el registro histórico y cronológico cristiano **no existe el año 0**. El año 1 d.C. sigue inmediatamente al año 1 a.C.
-
-Por lo tanto, en la realidad histórica:
-$$O = 0$$
 
 ### Respuesta
 En la realidad cronológica, **0 años completos** separan el año 1 a.C. del 1 d.C.
