@@ -209,7 +209,18 @@ print(f"Real intermediate years separating them: {intermediate_years}\n")
 
 ### 8. FINAL CONCLUSION
 
-The Jhon Pulgarin Theorem bridges continuous mathematics and digital/physical constraints by formalizing the universal relation O = | index(A) - index(B) | - 1, effectively eliminating boundary anomalies and memory-striding discrepancies. Transitioning from traditional randomized testing to automated SMT verification elevates this framework to absolute mathematical certainty, providing an infinitely scalable model for spatial navigation and indexing optimization.
+# Technical Conclusion: Spatial Navigation via Index Abstraction
+
+Formalizing the calculation using $O = |\text{index}(A) - \text{index}(B)| - 1$ successfully decouples 
+software logic from the irregularities of physical naming conventions. By mapping a 
+discontinuous space into a sequentially indexed array, the need for complex conditional 
+statements (`if/else`) to handle exceptions—such as the absence of a ground floor—is 
+entirely eliminated. 
+
+This transforms a spatial arithmetic problem into a constant-time $O(1)$ index operation, 
+ensuring a robust, predictable, and highly scalable navigation model for any 
+architectural layout.
+
 
 ### 9. HISTORICAL BACKGROUND AND RELATED WORK
 
