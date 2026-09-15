@@ -173,9 +173,7 @@ Los separan **0 años intermedios**. El año 1 d.C. es inmediatamente consecutiv
 
 
 ```python
-### SCRIPT EN PYTHON
 
-```python
 def calcular_elementos_intermedios(indice_a, indice_b):
     """
     Aplica la fórmula universal: O = |índice(A) - índice(B)| - 1
