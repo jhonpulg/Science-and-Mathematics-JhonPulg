@@ -75,81 +75,98 @@ separate $A$ from $B$.
 
 ## 6. COMPLETE EXAMPLES
 
-### 1. Elevator Problem (Floor 2 to B1)
-An elevator is on floor 2 and must go down to B1 (Basement 1). It is required to know how many floors separate them, not counting the origin floor nor the destination floor.
+#### 1. Elevator Problem (Floor 2 to B1)
 
-### Data
-To avoid "ghost floors", we assign real consecutive indices:
-* **Floor A (origin):** Floor 2 $\rightarrow$ index $2$
-* **Floor B (destination):** Basement 1 $\rightarrow$ index $0$
-*(Note: The intermediate Floor 1 occupies index 1)*
+An elevator is on floor 2 and must go down to B1 (Basement 1). It is required to know how many floors separate them, without counting the origin floor or the destination floor.
 
-### Formula and development
+##### Data
+
+To avoid "phantom floors", we assign real consecutive indices:
+
+- **Floor A (origin):** Floor 2 → index $2$
+- **Floor B (destination):** Basement 1 → index $0$
+  *(Note: The intermediate Floor 1 occupies index $1$)*
+
+##### Formula and development
+
 First we find the total distance ($D$):
+
 $$D = |\text{index}(A) - \text{index}(B)|$$
 $$D = |2 - 0|$$
 $$D = |2| = 2$$
 
 Now we find the intermediate floors ($O$):
+
 $$O = D - 1$$
 $$O = 2 - 1 = 1$$
 
-### Answer
-It is separated by **only 1 intermediate floor**, which is **Floor 1**.
+##### Answer
+
+It is separated by **1 single intermediate floor**, which is **Floor 1**.
 
 ---
 
-## 2. Pots Problem
+#### 2. Problem of the Jars
 
-### Problem statement
-There are 5 pots in a row numbered from 1 to 5. Pot 1 and pot 5 are the extremes. It is required to know how many pots are between them, not counting the origin nor the destination.
+##### Problem statement
 
-### Data
-Since the pots in the physical world are already consecutive by nature, their numbers are equivalent to their indices:
-* **Pot A (origin):** Pot 1 $\rightarrow$ index $1$
-* **Pot B (destination):** Pot 5 $\rightarrow$ index $5$
+There are 5 jars in a row numbered from 1 to 5. Jar 1 and jar 5 are the extremes. It is required to know how many jars are between them, without counting the origin or the destination.
 
-### Formula and development
+##### Data
+
+Since the jars in the physical world are already consecutive by nature, their numbers are equivalent to their indices:
+
+- **Jar A (origin):** Jar 1 → index $1$
+- **Jar B (destination):** Jar 5 → index $5$
+
+##### Formula and development
+
 First we find the total distance ($D$):
+
 $$D = |\text{index}(A) - \text{index}(B)|$$
 $$D = |1 - 5|$$
 $$D = |-4| = 4$$
 
-Now we find the intermediate pots ($O$):
+Now we find the intermediate jars ($O$):
+
 $$O = D - 1$$
 $$O = 4 - 1 = 3$$
 
-### Answer
-They are separated by **3 intermediate pots**, which are **2, 3 and 4**.
+##### Answer
+
+They are separated by **3 intermediate jars**, which are **2, 3, and 4**.
 
 ---
 
-### 3. Eras Problem (1 B.C. and 1 A.D.)
+#### 3. Problem of the Eras (1 B.C. and 1 A.D.)
 
-### Problem statement
-It is wanted to know how many full years are between the year 1 B.C. and the year 1 A.D., not counting the year of origin nor the destination.
+##### Problem statement
 
-### Data
-Given that in conventional historical chronology **year 0 does not exist** (year 1 A.D. began immediately after year 1 B.C. ended), we assign real consecutive indices to reflect this continuity:
-* **Year A (origin):** 1 B.C. $\rightarrow$ index $0$
-* **Year B (destination):** 1 A.D. $\rightarrow$ index $1$
+It is required to know how many complete years are between the year 1 B.C. and the year 1 A.D., without counting the origin year or the destination year.
 
-### Formula and development
+##### Data
+
+Given that in conventional historical chronology **the year 0 does not exist** (the year 1 A.D. began immediately after the year 1 B.C. ended), we assign real consecutive indices to reflect this continuity:
+
+- **Year A (origin):** 1 B.C. → index $0$
+- **Year B (destination):** 1 A.D. → index $1$
+
+##### Formula and development
+
 First we find the total distance ($D$):
+
 $$D = |\text{index}(A) - \text{index}(B)|$$
 $$D = |0 - 1|$$
 $$D = |-1| = 1$$
 
 Now we find the intermediate years ($O$):
+
 $$O = D - 1$$
 $$O = 1 - 1 = 0$$
 
-### Answer
-They are separated by **0 intermediate years**. Year 1 A.D. is immediately consecutive to year 1 B.C.
+##### Answer
 
-
-### Answer
-In chronological reality, **0 full years** separate year 1 B.C. from year 1 A.D.
+They are separated by **0 intermediate years**. The year 1 A.D. is immediately consecutive to the year 1 B.C.
 
 ### PYTHON SCRIPT
 
