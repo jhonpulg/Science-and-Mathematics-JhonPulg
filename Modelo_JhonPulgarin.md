@@ -7,33 +7,22 @@
 
 ### 1. INTRODUCCIÓN HISTÓRICA
 
-1. Introducción y Contexto Histórico: Un Problema de Siglos
-La contradicción entre el conteo abstracto y la realidad física no es una confusión moderna. Es un dilema
-lógico con siglos de historia que afecta la forma en que los seres humanos organizamos el tiempo, el
-espacio y la información. El origen principal de este conflicto radica en la dificultad histórica para aceptar
-e integrar el concepto del 'cero' como una entidad física y no solo matemática.
-El ejemplo más claro de esto se encuentra en nuestro calendario actual. El sistema cronológico pasa
-directamente del año 1 antes de Cristo (a.C.) al año 1 después de Cristo (d.C.). Físicamente, el 'año cero'
-nunca existió en la historia oficial. Esto genera que, al calcular el tiempo transcurrido entre el año 1 a.C. y
-el año 1 d.C., la matemática pura dicte una distancia de 2 unidades, cuando en la línea de tiempo real
-solo hay un cambio de era sin ningún año de por medio.
+#### 1. Introducción y Contexto Histórico: Un Problema de Siglos
 
-2. La Discrepancia Lógica: Matemáticos vs. Programadores
-Este desfase histórico ha provocado un debate clásico en el mundo de la ciencia y la tecnología,
-dividiendo la lógica en dos bandos bien definidos:
-• El Enfoque Matemático Puro: Los matemáticos operan bajo una recta numérica continua donde el
-cero es indispensable. Para la matemática abstracta, el cero representa el punto de origen o de equilibrio.
-Al ignorar si el cero tiene una representación física real, sus cálculos siempre asumen un espacio
-intermedio que incrementa artificialmente las distancias físicas.
-• El Enfoque de la Programación e Ingeniería: Los desarrolladores de software y los ingenieros chocan
-constantemente con esto mediante el famoso 'Error del Poste de Cerca' (Fencepost Error) o los
-problemas de indexación base cero (donde las listas empiezan en 0 y no en 1). Un programador sabe que
-una cosa es la cantidad de elementos intermedios y otra muy distinta es el índice de las posiciones,
-requiriendo ajustes constantes en el código para que las aplicaciones no fallen al interactuar con el
-mundo real.
+La contradicción entre el conteo abstracto y la realidad física no es una confusión moderna. Es un dilema lógico con siglos de historia que afecta la forma en que los seres humanos organizamos el tiempo, el espacio y la información. El origen principal de este conflicto radica en la dificultad histórica para aceptar e integrar el concepto del 'cero' como una entidad física y no solo matemática.
+
+El ejemplo más claro de esto se encuentra en nuestro calendario actual. El sistema cronológico pasa directamente del año 1 antes de Cristo (a.C.) al año 1 después de Cristo (d.C.). Físicamente, el 'año cero' nunca existió en la historia oficial. Esto genera que, al calcular el tiempo transcurrido entre el año 1 a.C. y el año 1 d.C., la matemática pura, al tratar los años como números enteros en una recta numérica continua, obtenga una distancia de 2 unidades (calculando |1 − (−1)| = 2). Sin embargo, la línea de tiempo real no tiene año 0, por lo que la distancia real es de 1 unidad: el año 1 d.C. es inmediatamente consecutivo al año 1 a.C.
+
+#### 2. La Discrepancia Lógica: Matemáticos vs. Programadores
+
+Este desfase histórico ha provocado un debate clásico en el mundo de la ciencia y la tecnología, dividiendo la lógica en dos bandos bien definidos:
+
+- **El Enfoque Matemático Puro:** Los matemáticos operan bajo una recta numérica continua donde el cero es indispensable. Para la matemática abstracta, el cero representa el punto de origen o de equilibrio. Al aplicar modelos de recta numérica continua sin adaptar la convención cronológica, los cálculos pueden arrojar distancias que no coinciden con la realidad física, incrementando artificialmente las distancias percibidas.
+
+- **El Enfoque de la Programación e Ingeniería:** Los desarrolladores de software y los ingenieros chocan constantemente con esto mediante el famoso 'Error del Poste de Cerca' (Fencepost Error) y, de forma relacionada pero distinta, los problemas de indexación base cero (en lenguajes como C, Python o Java, donde los arrays empiezan en 0 y no en 1). Un programador sabe que una cosa es la cantidad de elementos intermedios y otra muy distinta es el índice de las posiciones, requiriendo conversiones al interactuar con interfaces humanas que usan numeración base uno, para que las aplicaciones no fallen al mapear el mundo real.
 
 
-### 2. CASO DE ESTUDIO: EL ASCENSOR
+### CASO DE ESTUDIO: EL ASCENSOR
 El Caso de Estudio: El Dilema del Ascensor caso por que Jhon Pulgarin hallo el problema con 0
 La Teoría de Jhon Pulgarín nace de la observación directa de este fenómeno en la arquitectura cotidiana:
 Una persona vive en la planta 2 y su plaza de garaje está en el sótano 1. ¿Cuántas plantas separan
@@ -54,7 +43,7 @@ Donde:
 - | | = Valor absoluto
 - -1 = Porque al restar índices cuentas un extremo, menos uno lo corrige todo
 
-### 3. ENUNCIADO DEL MODELO
+#### 3. ENUNCIADO DEL MODELO
 
 Dadas dos posiciones cualesquiera $A$ y $B$ mapeadas en un espacio discreto 
 secuencial, con posiciones indexadas como $\text{índice}(A)$ e $\text{índice}(B)$, 
@@ -66,7 +55,7 @@ $$O = |\text{índice}(A) - \text{índice}(B)| - 1$$
 Donde $O$ representa la cardinalidad del subconjunto de elementos internos 
 que separan a $A$ de $B$.
 
-### 4. DEMOSTRACIÓN FORMAL
+#### 4. DEMOSTRACIÓN FORMAL
 
 1. La distancia de transición indexada entre ambas posiciones se define por la 
    métrica absoluta: $D = |\text{índice}(A) - \text{índice}(B)|$.
@@ -78,7 +67,7 @@ que separan a $A$ de $B$.
 4. Sustituyendo la restricción de exclusión en la métrica original se obtiene: 
    $O = D - 1 = |\text{índice}(A) - \text{índice}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
-### 5. PROPIEDADES DERIVADAS DEL MODELO
+#### 5. PROPIEDADES DERIVADAS DEL MODELO
 
 * **Condición de Contigüidad:** Si $A$ y $B$ son elementos adyacentes consecutivos, 
   entonces $O = 1 - 1 = 0$ (cero elementos intermedios).
@@ -89,7 +78,7 @@ que separan a $A$ de $B$.
 * **Simetría Direccional:** El uso del valor absoluto garantiza que $O(A,B) = O(B,A)$, 
   demostrando que el conteo es invariante respecto al sentido de la navegación.
 
-## 6. EJEMPLOS COMPLETOS
+#### 6. EJEMPLOS COMPLETOS
 
 ### 1. Problema del Ascensor (Piso 2 a S1)
 Un ascensor está en el piso 2 y debe bajar hasta el S1 (Sótano 1). Se requiere saber cuántos pisos lo separan, sin contar el piso de origen ni el de destino.
@@ -121,12 +110,12 @@ Lo separa **1 solo piso intermedio**, que es el **Piso 1**.
 ### Enunciado del problema
 Hay 5 potes en fila numerados del 1 al 5. El pote 1 y el pote 5 son los extremos. Se requiere saber cuántos potes hay entre ellos, sin contar el origen ni el destino.
 
-### Datos
+## Datos
 Como los potes en el mundo físico ya son consecutivos por naturaleza, sus números equivalen a sus índices:
 * **Pote A (origen):** Pote 1 $\rightarrow$ índice $1$
 * **Pote B (destino):** Pote 5 $\rightarrow$ índice $5$
 
-### Fórmula y desarrollo
+## Fórmula y desarrollo
 Primero hallamos la distancia total ($D$):
 $$D = |\text{índice}(A) - \text{índice}(B)|$$
 $$D = |1 - 5|$$
@@ -136,22 +125,22 @@ Ahora hallamos los potes intermedios ($O$):
 $$O = D - 1$$
 $$O = 4 - 1 = 3$$
 
-### Respuesta
+## Respuesta
 Los separan **3 potes intermedios**, que son el **2, 3 y 4**.
 
 ---
 
 ## 3. Problema de las Eras (1 a.C. y 1 d.C.)
 
-### Enunciado del problema
+## Enunciado del problema
 Se quiere saber cuántos años completos hay entre el año 1 a.C. y el año 1 d.C., sin contar el año de origen ni el de destino.
 
-### Datos
+## Datos
 Dado que en la cronología histórica convencional **el año 0 no existe** (el año 1 d.C. comenzó inmediatamente después de terminar el año 1 a.C.), asignamos índices consecutivos reales para reflejar esta continuidad:
 * **Año A (origen):** 1 a.C. $\rightarrow$ índice $0$
 * **Año B (destino):** 1 d.C. $\rightarrow$ índice $1$
 
-### Fórmula y desarrollo
+## Fórmula y desarrollo
 Primero hallamos la distancia total ($D$):
 $$D = |\text{índice}(A) - \text{índice}(B)|$$
 $$D = |0 - 1|$$
@@ -224,7 +213,7 @@ print(f"Índice Destino (1 d.C.): {ano_destino_idx}")
 print(f"Años intermedios reales que los separan: {anos_intermedios}\n")
 
 ```
-### 7. APLICACIONES DEL MÉTODO
+#### 7. APLICACIONES DEL MÉTODO
 
 
 * **Estructuras de Datos y Arrays** (cálculo de distancias lógicas y offsets)
@@ -236,7 +225,7 @@ print(f"Años intermedios reales que los separan: {anos_intermedios}\n")
 * **Ingeniería Civil y Arquitectura** (mapeo lógico de ascensores sin Piso 0)
 
 
-### 8. CONCLUSION FINAL
+#### 8. CONCLUSION FINAL
 
 # Conclusión Técnica: Navegación Espacial mediante Abstracción de Índices
 
@@ -252,7 +241,7 @@ escalable frente a cualquier configuración arquitectónica.
 
 
 -------------------------------------------------------------------------------------------------------------------------------
-## 9. ANTECEDENTES HISTÓRICOS Y TRABAJO RELACIONADO
+#### 9. ANTECEDENTES HISTÓRICOS Y TRABAJO RELACIONADO
 
 
 El presente modelo de indexación aborda de manera formal un fenómeno identificado en diversas 
@@ -287,7 +276,7 @@ mapear la realidad física.
 
 
 
-### 10. VERIFICACIÓN FORMAL DE MÉTODOS (PROBADOR DE TEOREMAS VÍA SOLUCIONADOR SMT)
+####  10. VERIFICACIÓN FORMAL DE MÉTODOS (PROBADOR DE TEOREMAS VÍA SOLUCIONADOR SMT)
 
 
 La propiedad matemática de simetría de la fórmula se demuestra formalmente para el 
