@@ -54,15 +54,13 @@ separate $A$ from $B$.
 
 ## 4. FORMAL PROOF
 
-1. The indexed transition distance between both positions is defined by the 
-   absolute metric: $D = |\text{index}(A) - \text{index}(B)|$.
-2. By definition of discrete distance, the value $D$ counts all the steps 
-   required to reach the final position, excluding the origin $A$ but 
-   including the destination $B$.
-3. To exclusively isolate the open interval $(\text{index}(A), \text{index}(B))$, 
-   the destination element ($B$) must be removed from the total count.
-4. Substituting the exclusion constraint into the original metric yields: 
-   $O = D - 1 = |\text{index}(A) - \text{index}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
+1. The indexed transition distance between both positions is defined by the absolute metric: $D = |\text{index}(A) - \text{index}(B)|$.
+
+2. By definition of discrete distance, the value $D$ accounts for all the steps needed to reach the final position, excluding the origin $A$ but including the destination $B$.
+
+3. To isolate exclusively the open interval $(\text{index}(A), \text{index}(B))$, the destination element ($B$) must be removed from the total count.
+
+4. Substituting the exclusion restriction into the original metric yields: $O = D - 1 = |\text{index}(A) - \text{index}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
 ## 5. DERIVED MODEL PROPERTIES
 
