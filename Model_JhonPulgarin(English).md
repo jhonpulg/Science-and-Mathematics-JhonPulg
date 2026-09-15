@@ -62,17 +62,15 @@ separate $A$ from $B$.
 
 4. Substituting the exclusion restriction into the original metric yields: $O = D - 1 = |\text{index}(A) - \text{index}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
-## 5. DERIVED MODEL PROPERTIES
+## ### 5. PROPERTIES DERIVED FROM THE MODEL
 
-* **Contiguity Condition:** If $A$ and $B$ are adjacent consecutive elements, 
-  then $O = 1 - 1 = 0$ (zero intermediate elements).
-* **Identity of Vacuity:** If $A = B$, then $O = 0 - 1 = -1$, which formalizes a 
-  nonexistent or null interval by discrete topological definition.
-* **Bounded Non-Negativity:** $O \geq 0$ for any pair of distinct, non-consecutive 
-  positions within the indexed space.
-* **Directional Symmetry:** The use of the absolute value guarantees that 
-  $O(A,B) = O(B,A)$, proving that the count is invariant with respect to the 
-  direction of navigation.
+- **Contiguity Condition:** If $A$ and $B$ are consecutive adjacent elements, then $O = 1 - 1 = 0$ (zero intermediate elements).
+
+- **Vacuity Identity:** If $A = B$, then $O = 0 - 1 = -1$, which formalizes a nonexistent or null interval by discrete topological definition.
+
+- **Bounded Non-Negativity:** $O \geq 0$ for any pair of distinct and non-consecutive positions in the indexed space.
+
+- **Directional Symmetry:** The use of the absolute value guarantees that $O(A,B) = O(B,A)$, proving that the count is invariant with respect to the direction of navigation.
 
 
 ## 6. COMPLETE EXAMPLES
