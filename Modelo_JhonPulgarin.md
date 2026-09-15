@@ -76,82 +76,98 @@ que separan a $A$ de $B$.
 
 ## 6. EJEMPLOS COMPLETOS
 
-### 1. Problema del Ascensor (Piso 2 a S1)
+#### 1. Problema del Ascensor (Piso 2 a S1)
+
 Un ascensor está en el piso 2 y debe bajar hasta el S1 (Sótano 1). Se requiere saber cuántos pisos lo separan, sin contar el piso de origen ni el de destino.
 
-#### Datos
-Para evitar "pisos fantasma", asignamos índices consecutivos reales:
-* **Piso A (origen):** Piso 2 $\rightarrow$ índice $2$
-* **Piso B (destino):** Sótano 1 $\rightarrow$ índice $0$
-*(Nota: El Piso 1 intermedio ocupa el índice 1)*
+##### Datos
 
-#### Fórmula y desarrollo
+Para evitar "pisos fantasma", asignamos índices consecutivos reales:
+
+- **Piso A (origen):** Piso 2 → índice $2$
+- **Piso B (destino):** Sótano 1 → índice $0$
+  *(Nota: El Piso 1 intermedio ocupa el índice $1$)*
+
+##### Fórmula y desarrollo
+
 Primero hallamos la distancia total ($D$):
+
 $$D = |\text{índice}(A) - \text{índice}(B)|$$
 $$D = |2 - 0|$$
 $$D = |2| = 2$$
 
 Ahora hallamos los pisos intermedios ($O$):
+
 $$O = D - 1$$
 $$O = 2 - 1 = 1$$
 
-####  Respuesta
-Lo separa **1 solo piso intermedio**, que es el **Piso 1**.
+##### Respuesta
 
+Lo separa **1 solo piso intermedio**, que es el **Piso 1**.
 
 ---
 
-### 2. Problema de los Potes
+#### 2. Problema de los Potes
 
-### Enunciado del problema
+##### Enunciado del problema
+
 Hay 5 potes en fila numerados del 1 al 5. El pote 1 y el pote 5 son los extremos. Se requiere saber cuántos potes hay entre ellos, sin contar el origen ni el destino.
 
-#### Datos
-Como los potes en el mundo físico ya son consecutivos por naturaleza, sus números equivalen a sus índices:
-* **Pote A (origen):** Pote 1 $\rightarrow$ índice $1$
-* **Pote B (destino):** Pote 5 $\rightarrow$ índice $5$
+##### Datos
 
-#### Fórmula y desarrollo
+Como los potes en el mundo físico ya son consecutivos por naturaleza, sus números equivalen a sus índices:
+
+- **Pote A (origen):** Pote 1 → índice $1$
+- **Pote B (destino):** Pote 5 → índice $5$
+
+##### Fórmula y desarrollo
+
 Primero hallamos la distancia total ($D$):
+
 $$D = |\text{índice}(A) - \text{índice}(B)|$$
 $$D = |1 - 5|$$
 $$D = |-4| = 4$$
 
 Ahora hallamos los potes intermedios ($O$):
+
 $$O = D - 1$$
 $$O = 4 - 1 = 3$$
 
-## Respuesta
+##### Respuesta
+
 Los separan **3 potes intermedios**, que son el **2, 3 y 4**.
 
 ---
 
-### 3. Problema de las Eras (1 a.C. y 1 d.C.)
+#### 3. Problema de las Eras (1 a.C. y 1 d.C.)
 
-#### Enunciado del problema
+##### Enunciado del problema
+
 Se quiere saber cuántos años completos hay entre el año 1 a.C. y el año 1 d.C., sin contar el año de origen ni el de destino.
 
-#### Datos
-Dado que en la cronología histórica convencional **el año 0 no existe** (el año 1 d.C. comenzó inmediatamente después de terminar el año 1 a.C.), asignamos índices consecutivos reales para reflejar esta continuidad:
-* **Año A (origen):** 1 a.C. $\rightarrow$ índice $0$
-* **Año B (destino):** 1 d.C. $\rightarrow$ índice $1$
+##### Datos
 
-#### Fórmula y desarrollo
+Dado que en la cronología histórica convencional **el año 0 no existe** (el año 1 d.C. comenzó inmediatamente después de terminar el año 1 a.C.), asignamos índices consecutivos reales para reflejar esta continuidad:
+
+- **Año A (origen):** 1 a.C. → índice $0$
+- **Año B (destino):** 1 d.C. → índice $1$
+
+##### Fórmula y desarrollo
+
 Primero hallamos la distancia total ($D$):
+
 $$D = |\text{índice}(A) - \text{índice}(B)|$$
 $$D = |0 - 1|$$
 $$D = |-1| = 1$$
 
 Ahora hallamos los años intermedios ($O$):
+
 $$O = D - 1$$
 $$O = 1 - 1 = 0$$
 
-#### Respuesta
+##### Respuesta
+
 Los separan **0 años intermedios**. El año 1 d.C. es inmediatamente consecutivo al año 1 a.C.
-
-
-#### Respuesta
-En la realidad cronológica, **0 años completos** separan el año 1 a.C. del 1 d.C.
 
 ### SCRIPT EN PYTHON
 
