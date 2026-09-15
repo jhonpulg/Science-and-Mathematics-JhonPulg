@@ -29,6 +29,7 @@ Este desfase histórico ha provocado un debate clásico en el mundo de la cienci
 El modelo de Jhon Pulgarín nace de la observación directa de este fenómeno en la arquitectura cotidiana: una persona vive en la planta 2 y su plaza de garaje está en el sótano 1. ¿Cuántas plantas separan su vivienda de su plaza?
 
 Si se introduce este problema de forma lineal en una Inteligencia Artificial o en un sistema matemático teórico que trate los pisos como números enteros en una recta continua (donde el sótano 1 se representa como −1), el cálculo matemático estricto establece que la distancia es 3 (calculando 2 − (−1) = 3). Sin embargo, en la vida real, los botones del ascensor de ese edificio muestran que al bajar del piso 2 al sótano 1 son solo 2 botones.
+
                      FORMULA OFICIAL
 
 O = |indice(A) - indice(B)| - 1
@@ -55,15 +56,13 @@ que separan a $A$ de $B$.
 
 ## 4. DEMOSTRACIÓN FORMAL
 
-1. La distancia de transición indexada entre ambas posiciones se define por la 
-   métrica absoluta: $D = |\text{índice}(A) - \text{índice}(B)|$.
-2. Por definición de distancia discreta, el valor $D$ contabiliza todos los pasos 
-   necesarios para alcanzar la posición final, excluyendo el origen $A$ pero 
-   incluyendo el destino $B$.
-3. Para aislar exclusivamente el intervalo abierto $(\text{índice}(A), \text{índice}(B))$, 
-   se debe remover el elemento de destino ($B$) del conteo total.
-4. Sustituyendo la restricción de exclusión en la métrica original se obtiene: 
-   $O = D - 1 = |\text{índice}(A) - \text{índice}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
+1. La distancia de transición indexada entre ambas posiciones se define por la métrica absoluta: $D = |\text{índice}(A) - \text{índice}(B)|$.
+
+2. Por definición de distancia discreta, el valor $D$ contabiliza todos los pasos necesarios para alcanzar la posición final, excluyendo el origen $A$ pero incluyendo el destino $B$.
+
+3. Para aislar exclusivamente el intervalo abierto $(\text{índice}(A), \text{índice}(B))$, se debe remover el elemento de destino ($B$) del conteo total.
+
+4. Sustituyendo la restricción de exclusión en la métrica original se obtiene: $O = D - 1 = |\text{índice}(A) - \text{índice}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
 ## 5. PROPIEDADES DERIVADAS DEL MODELO
 
