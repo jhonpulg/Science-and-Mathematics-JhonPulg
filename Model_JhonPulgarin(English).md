@@ -22,10 +22,13 @@ This historical mismatch has sparked a classic debate in the world of science an
 - **The Programming and Engineering Approach:** Software developers and engineers constantly run into this through the famous 'Fencepost Error' and, in a related but distinct way, zero-based indexing problems (in languages such as C, Python, or Java, where arrays start at 0 and not at 1). A programmer knows that one thing is the number of intermediate elements and quite another is the index of the positions, requiring conversions when interacting with human interfaces that use one-based numbering, so that applications do not fail when mapping the real world.
   
 ## 2. CASE STUDY: THE ELEVATOR
-The Case Study: The Elevator Dilemma case why Jhon Pulgarin found the problem with 0
-Jhon Pulgarin's Theory is born from direct observation of this phenomenon in everyday architecture:
-A person lives on floor 2 and his parking space is in basement 1. How many floors separate his home from his parking space?
-If this problem is introduced linearly into an Artificial Intelligence or a theoretical mathematical system, the strict mathematical calculation establishes that the distance is 3 (calculating 2 - (-1) = 3). However, in real life, the elevator buttons in that building show that when going down from floor 2 to basement 1 there are only 2 buttons
+### 2. CASE STUDY: THE ELEVATOR
+
+#### The Case Study: The Elevator Dilemma
+
+Jhon Pulgarín's Model is born from the direct observation of this phenomenon in everyday architecture: a person lives on floor 2 and their parking spot is in basement 1. How many floors separate their home from their parking spot?
+
+If this problem is introduced in a linear fashion into an Artificial Intelligence or a theoretical mathematical system that treats floors as integers on a continuous number line (where basement 1 is represented as −1), strict mathematical calculation establishes that the distance is 3 (calculating 2 − (−1) = 3). However, in real life, the elevator buttons in that building show that going down from floor 2 to basement 1 involves only 2 buttons.
                      OFFICIAL FORMULA
 
 O = |index(A) - index(B)| - 1
