@@ -5,15 +5,15 @@
 
 ---
 
-### 1. HISTORICAL INTRODUCTION
+## 1. HISTORICAL INTRODUCTION
 
-## 1. Introduction and Historical Context: A Problem of Centuries
+####1. Introduction and Historical Context: A Problem of Centuries
 
 The contradiction between abstract counting and physical reality is not a modern confusion. It is a logical dilemma with centuries of history that affects the way human beings organize time, space, and information. The main origin of this conflict lies in the historical difficulty of accepting and integrating the concept of 'zero' as a physical entity and not just a mathematical one.
 
 The clearest example of this is found in our current calendar. The chronological system passes directly from the year 1 before Christ (B.C.) to the year 1 after Christ (A.D.). Physically, the 'year zero' never existed in official history. This means that, when calculating the time elapsed between the year 1 B.C. and the year 1 A.D., pure mathematics, by treating the years as integers on a continuous number line, yields a distance of 2 units (calculating |1 − (−1)| = 2). However, the real timeline has no year 0, so the real distance is 1 unit: the year 1 A.D. is immediately consecutive to the year 1 B.C.
 
-## 2. The Logical Discrepancy: Mathematicians vs. Programmers
+#### 2. The Logical Discrepancy: Mathematicians vs. Programmers
 
 This historical mismatch has sparked a classic debate in the world of science and technology, dividing logic into two well-defined camps:
 
@@ -21,7 +21,7 @@ This historical mismatch has sparked a classic debate in the world of science an
 
 - **The Programming and Engineering Approach:** Software developers and engineers constantly run into this through the famous 'Fencepost Error' and, in a related but distinct way, zero-based indexing problems (in languages such as C, Python, or Java, where arrays start at 0 and not at 1). A programmer knows that one thing is the number of intermediate elements and quite another is the index of the positions, requiring conversions when interacting with human interfaces that use one-based numbering, so that applications do not fail when mapping the real world.
   
-### 2. CASE STUDY: THE ELEVATOR
+## 2. CASE STUDY: THE ELEVATOR
 The Case Study: The Elevator Dilemma case why Jhon Pulgarin found the problem with 0
 Jhon Pulgarin's Theory is born from direct observation of this phenomenon in everyday architecture:
 A person lives on floor 2 and his parking space is in basement 1. How many floors separate his home from his parking space?
@@ -37,7 +37,7 @@ Where:
 - | | = Absolute value
 - -1 = Because when subtracting indices you count one extreme, minus one corrects everything
 
-### 3. MODEL STATEMENT
+## 3. MODEL STATEMENT
 
 Given any two positions $A$ and $B$ mapped within a sequential discrete space, 
 with indexed positions denoted as $\text{index}(A)$ and $\text{index}(B)$, the 
@@ -49,7 +49,7 @@ $$O = |\text{index}(A) - \text{index}(B)| - 1$$
 Where $O$ represents the cardinality of the subset of internal elements that 
 separate $A$ from $B$.
 
-### 4. FORMAL PROOF
+## 4. FORMAL PROOF
 
 1. The indexed transition distance between both positions is defined by the 
    absolute metric: $D = |\text{index}(A) - \text{index}(B)|$.
@@ -61,7 +61,7 @@ separate $A$ from $B$.
 4. Substituting the exclusion constraint into the original metric yields: 
    $O = D - 1 = |\text{index}(A) - \text{index}(B)| - 1$. *Quod Erat Demonstrandum* (Q.E.D.).
 
-### 5. DERIVED MODEL PROPERTIES
+## 5. DERIVED MODEL PROPERTIES
 
 * **Contiguity Condition:** If $A$ and $B$ are adjacent consecutive elements, 
   then $O = 1 - 1 = 0$ (zero intermediate elements).
@@ -125,7 +125,7 @@ They are separated by **3 intermediate pots**, which are **2, 3 and 4**.
 
 ---
 
-## 3. Eras Problem (1 B.C. and 1 A.D.)
+### 3. Eras Problem (1 B.C. and 1 A.D.)
 
 ### Problem statement
 It is wanted to know how many full years are between the year 1 B.C. and the year 1 A.D., not counting the year of origin nor the destination.
@@ -205,9 +205,9 @@ print(f"Origin Index (1 B.C.): {origin_year_idx}")
 print(f"Destination Index (1 A.D.): {destination_year_idx}")
 print(f"Real intermediate years separating them: {intermediate_years}\n")
 ```
-### 7. APPLICATIONS OF THE THEOREM
 
-### 7. APPLICATIONS OF THE METHOD
+
+## 7. APPLICATIONS OF THE METHOD
 
 * **Data Structures and Arrays** (calculation of logical distances and offsets)
 * **Node Management** in linked lists and linear structures
@@ -218,7 +218,7 @@ print(f"Real intermediate years separating them: {intermediate_years}\n")
 * **Civil Engineering and Architecture** (logical elevator mapping without Floor 0)
 
 
-### 8. FINAL CONCLUSION
+## 8. FINAL CONCLUSION
 
 # Technical Conclusion: Spatial Navigation via Index Abstraction
 
@@ -233,7 +233,7 @@ ensuring a robust, predictable, and highly scalable navigation model for any
 architectural layout.
 
 
-### 9. HISTORICAL BACKGROUND AND RELATED WORK
+## 9. HISTORICAL BACKGROUND AND RELATED WORK
 
 
 The present indexing model formally addresses a phenomenon identified across various scientific 
@@ -264,7 +264,7 @@ resolve this, he introduced the "Astronomical Year Numbering" scale, where 1 BC 
 numerically as year 0, validating the need to implement continuous indices to map physical reality.
 
 
-### 10. FORMAL VERIFICATION OF METHODS (THEOREM PROVER VIA SMT SOLVER)
+## 10. FORMAL VERIFICATION OF METHODS (THEOREM PROVER VIA SMT SOLVER)
 
 
 The mathematical property of symmetry in the formula is formally proven for the infinite 
