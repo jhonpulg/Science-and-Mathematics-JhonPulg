@@ -171,62 +171,60 @@ Los separan **0 años intermedios**. El año 1 d.C. es inmediatamente consecutiv
 
 ### SCRIPT EN PYTHON
 
-```python
-### SCRIPT EN PYTHON
 
 ```python
-def calcular_elementos_intermedios(indice_a, indice_b):
+def calculate_intermediate_elements(index_a, index_b):
     """
-    Aplica la fórmula universal: O = |índice(A) - índice(B)| - 1
+    Applies the universal formula: O = |index(A) - index(B)| - 1
     """
-    distancia = abs(indice_a - indice_b)
-    intermedios = distancia - 1
-    return intermedios
+    distance = abs(index_a - index_b)
+    intermediates = distance - 1
+    return intermediates
 
 
 # =====================================================================
-# 1. PROBLEMA DEL ASCENSOR (Piso 2 a Sótano 1 - Sin Planta Baja)
-# Escala real continua: S1 = 0, Piso 1 = 1, Piso 2 = 2
+# 1. ELEVATOR PROBLEM (Floor 2 to Basement 1 - No Ground Floor)
+# Real continuous scale: B1 = 0, Floor 1 = 1, Floor 2 = 2
 # =====================================================================
-piso_origen_idx = 2   # Piso 2
-piso_destino_idx = 0  # Sótano 1
+floor_origin_idx = 2   # Floor 2
+floor_destination_idx = 0  # Basement 1
 
-pisos_intermedios = calcular_elementos_intermedios(piso_origen_idx, piso_destino_idx)
+intermediate_floors = calculate_intermediate_elements(floor_origin_idx, floor_destination_idx)
 
-print("--- 1. PROBLEMA DEL ASCENSOR ---")
-print(f"Índice Origen (Piso 2): {piso_origen_idx}")
-print(f"Índice Destino (S1): {piso_destino_idx}")
-print(f"Pisos intermedios reales que los separan: {pisos_intermedios}\n")
-
-
-# =====================================================================
-# 2. PROBLEMA DE LOS POTES EN FILA
-# Escala: Pote 1 = 1, Pote 5 = 5
-# =====================================================================
-pote_origen_idx = 1
-pote_destino_idx = 5
-
-potes_intermedios = calcular_elementos_intermedios(pote_origen_idx, pote_destino_idx)
-
-print("--- 2. PROBLEMA DE LOS POTES ---")
-print(f"Índice Origen (Pote 1): {pote_origen_idx}")
-print(f"Índice Destino (Pote 5): {pote_destino_idx}")
-print(f"Potes intermedios reales que los separan: {potes_intermedios}\n")
+print("--- 1. ELEVATOR PROBLEM ---")
+print(f"Origin Index (Floor 2): {floor_origin_idx}")
+print(f"Destination Index (B1): {floor_destination_idx}")
+print(f"Real intermediate floors separating them: {intermediate_floors}\n")
 
 
 # =====================================================================
-# 3. PROBLEMA DE LAS ERAS (1 a.C. a 1 d.C. - Sin Año 0 Histórico)
-# Escala real continua: 1 a.C. = 0, 1 d.C. = 1
+# 2. PROBLEM OF THE JARS IN A ROW
+# Scale: Jar 1 = 1, Jar 5 = 5
 # =====================================================================
-ano_origen_idx = 0   # 1 a.C.
-ano_destino_idx = 1  # 1 d.C.
+jar_origin_idx = 1
+jar_destination_idx = 5
 
-anos_intermedios = calcular_elementos_intermedios(ano_origen_idx, ano_destino_idx)
+intermediate_jars = calculate_intermediate_elements(jar_origin_idx, jar_destination_idx)
 
-print("--- 3. PROBLEMA DE LAS ERAS ---")
-print(f"Índice Origen (1 a.C.): {ano_origen_idx}")
-print(f"Índice Destino (1 d.C.): {ano_destino_idx}")
-print(f"Años intermedios reales que los separan: {anos_intermedios}\n")
+print("--- 2. PROBLEM OF THE JARS ---")
+print(f"Origin Index (Jar 1): {jar_origin_idx}")
+print(f"Destination Index (Jar 5): {jar_destination_idx}")
+print(f"Real intermediate jars separating them: {intermediate_jars}\n")
+
+
+# =====================================================================
+# 3. PROBLEM OF THE ERAS (1 B.C. to 1 A.D. - No Historical Year 0)
+# Real continuous scale: 1 B.C. = 0, 1 A.D. = 1
+# =====================================================================
+year_origin_idx = 0   # 1 B.C.
+year_destination_idx = 1  # 1 A.D.
+
+intermediate_years = calculate_intermediate_elements(year_origin_idx, year_destination_idx)
+
+print("--- 3. PROBLEM OF THE ERAS ---")
+print(f"Origin Index (1 B.C.): {year_origin_idx}")
+print(f"Destination Index (1 A.D.): {year_destination_idx}")
+print(f"Real intermediate years separating them: {intermediate_years}\n")
 
 ```
 ## 7. APLICACIONES DEL MÉTODO
