@@ -7,15 +7,20 @@
 
 ### 1. HISTORICAL INTRODUCTION
 
-1. Introduction and Historical Context: A Centuries-Old Problem
-The contradiction between abstract counting and physical reality is not a modern confusion. It is a logical dilemma with centuries of history that affects the way human beings organize time, space, and information. The main origin of this conflict lies in the historical difficulty in accepting and integrating the concept of 'zero' as a physical entity and not just a mathematical one.
-The clearest example of this is found in our current calendar. The chronological system goes directly from the year 1 Before Christ (B.C.) to the year 1 Anno Domini (A.D.). Physically, the 'year zero' never existed in official history. This generates that, when calculating the time elapsed between the year 1 B.C. and the year 1 A.D., pure mathematics dictates a distance of 2 units, when in the real timeline there is only a change of era with no year in between.
+## 1. Introduction and Historical Context: A Problem of Centuries
 
-2. The Logical Discrepancy: Mathematicians vs. Programmers
-This historical gap has caused a classic debate in the world of science and technology, dividing logic into two well-defined camps:
-• The Pure Mathematical Approach: Mathematicians operate under a continuous number line where zero is indispensable. For abstract mathematics, zero represents the point of origin or equilibrium. By ignoring whether zero has a real physical representation, their calculations always assume an intermediate space that artificially increases physical distances.
-• The Programming and Engineering Approach: Software developers and engineers constantly clash with this through the famous 'Fencepost Error' or zero-based indexing problems (where lists start at 0 and not 1). A programmer knows that one thing is the number of intermediate elements and a very different thing is the index of the positions, requiring constant adjustments in the code so that applications do not fail when interacting with the real world.
+The contradiction between abstract counting and physical reality is not a modern confusion. It is a logical dilemma with centuries of history that affects the way human beings organize time, space, and information. The main origin of this conflict lies in the historical difficulty of accepting and integrating the concept of 'zero' as a physical entity and not just a mathematical one.
 
+The clearest example of this is found in our current calendar. The chronological system passes directly from the year 1 before Christ (B.C.) to the year 1 after Christ (A.D.). Physically, the 'year zero' never existed in official history. This means that, when calculating the time elapsed between the year 1 B.C. and the year 1 A.D., pure mathematics, by treating the years as integers on a continuous number line, yields a distance of 2 units (calculating |1 − (−1)| = 2). However, the real timeline has no year 0, so the real distance is 1 unit: the year 1 A.D. is immediately consecutive to the year 1 B.C.
+
+## 2. The Logical Discrepancy: Mathematicians vs. Programmers
+
+This historical mismatch has sparked a classic debate in the world of science and technology, dividing logic into two well-defined camps:
+
+- **The Pure Mathematical Approach:** Mathematicians operate under a continuous number line where zero is indispensable. For abstract mathematics, zero represents the point of origin or equilibrium. When applying continuous number-line models without adapting the chronological convention, calculations can produce distances that do not match physical reality, artificially inflating perceived distances.
+
+- **The Programming and Engineering Approach:** Software developers and engineers constantly run into this through the famous 'Fencepost Error' and, in a related but distinct way, zero-based indexing problems (in languages such as C, Python, or Java, where arrays start at 0 and not at 1). A programmer knows that one thing is the number of intermediate elements and quite another is the index of the positions, requiring conversions when interacting with human interfaces that use one-based numbering, so that applications do not fail when mapping the real world.
+  
 ### 2. CASE STUDY: THE ELEVATOR
 The Case Study: The Elevator Dilemma case why Jhon Pulgarin found the problem with 0
 Jhon Pulgarin's Theory is born from direct observation of this phenomenon in everyday architecture:
