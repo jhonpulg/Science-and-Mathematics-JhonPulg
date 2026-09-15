@@ -22,7 +22,7 @@ Este desfase histórico ha provocado un debate clásico en el mundo de la cienci
 - **El Enfoque de la Programación e Ingeniería:** Los desarrolladores de software y los ingenieros chocan constantemente con esto mediante el famoso 'Error del Poste de Cerca' (Fencepost Error) y, de forma relacionada pero distinta, los problemas de indexación base cero (en lenguajes como C, Python o Java, donde los arrays empiezan en 0 y no en 1). Un programador sabe que una cosa es la cantidad de elementos intermedios y otra muy distinta es el índice de las posiciones, requiriendo conversiones al interactuar con interfaces humanas que usan numeración base uno, para que las aplicaciones no fallen al mapear el mundo real.
 
 
-### CASO DE ESTUDIO: EL ASCENSOR
+### 2. CASO DE ESTUDIO: EL ASCENSOR
 El Caso de Estudio: El Dilema del Ascensor caso por que Jhon Pulgarin hallo el problema con 0
 La Teoría de Jhon Pulgarín nace de la observación directa de este fenómeno en la arquitectura cotidiana:
 Una persona vive en la planta 2 y su plaza de garaje está en el sótano 1. ¿Cuántas plantas separan
