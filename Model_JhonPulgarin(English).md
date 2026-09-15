@@ -7,7 +7,7 @@
 
 ## 1. HISTORICAL INTRODUCTION
 
-####1. Introduction and Historical Context: A Problem of Centuries
+#### 1. Introduction and Historical Context: A Problem of Centuries
 
 The contradiction between abstract counting and physical reality is not a modern confusion. It is a logical dilemma with centuries of history that affects the way human beings organize time, space, and information. The main origin of this conflict lies in the historical difficulty of accepting and integrating the concept of 'zero' as a physical entity and not just a mathematical one.
 
