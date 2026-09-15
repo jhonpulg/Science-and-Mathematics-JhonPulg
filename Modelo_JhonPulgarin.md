@@ -172,6 +172,9 @@ Los separan **0 años intermedios**. El año 1 d.C. es inmediatamente consecutiv
 ### SCRIPT EN PYTHON
 
 ```python
+### SCRIPT EN PYTHON
+
+```python
 def calcular_elementos_intermedios(indice_a, indice_b):
     """
     Aplica la fórmula universal: O = |índice(A) - índice(B)| - 1
@@ -180,11 +183,12 @@ def calcular_elementos_intermedios(indice_a, indice_b):
     intermedios = distancia - 1
     return intermedios
 
+
 # =====================================================================
 # 1. PROBLEMA DEL ASCENSOR (Piso 2 a Sótano 1 - Sin Planta Baja)
 # Escala real continua: S1 = 0, Piso 1 = 1, Piso 2 = 2
 # =====================================================================
-piso_origen_idx = 2  # Piso 2
+piso_origen_idx = 2   # Piso 2
 piso_destino_idx = 0  # Sótano 1
 
 pisos_intermedios = calcular_elementos_intermedios(piso_origen_idx, piso_destino_idx)
@@ -214,7 +218,7 @@ print(f"Potes intermedios reales que los separan: {potes_intermedios}\n")
 # 3. PROBLEMA DE LAS ERAS (1 a.C. a 1 d.C. - Sin Año 0 Histórico)
 # Escala real continua: 1 a.C. = 0, 1 d.C. = 1
 # =====================================================================
-ano_origen_idx = 0  # 1 a.C.
+ano_origen_idx = 0   # 1 a.C.
 ano_destino_idx = 1  # 1 d.C.
 
 anos_intermedios = calcular_elementos_intermedios(ano_origen_idx, ano_destino_idx)
