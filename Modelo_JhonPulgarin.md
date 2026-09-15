@@ -66,14 +66,13 @@ que separan a $A$ de $B$.
 
 ## 5. PROPIEDADES DERIVADAS DEL MODELO
 
-* **Condición de Contigüidad:** Si $A$ y $B$ son elementos adyacentes consecutivos, 
-  entonces $O = 1 - 1 = 0$ (cero elementos intermedios).
-* **Identidad de Vacuidad:** Si $A = B$, entonces $O = 0 - 1 = -1$, lo que formaliza un 
-  intervalo inexistente o nulo por definición topológica discreta.
-* **No Negatividad Acotada:** $O \geq 0$ para cualquier par de posiciones distintas y no 
-  consecutivas en el espacio indexado.
-* **Simetría Direccional:** El uso del valor absoluto garantiza que $O(A,B) = O(B,A)$, 
-  demostrando que el conteo es invariante respecto al sentido de la navegación.
+- **Condición de Contigüidad:** Si $A$ y $B$ son elementos adyacentes consecutivos, entonces $O = 1 - 1 = 0$ (cero elementos intermedios).
+
+- **Identidad de Vacuidad:** Si $A = B$, entonces $O = 0 - 1 = -1$, lo que formaliza un intervalo inexistente o nulo por definición topológica discreta.
+
+- **No Negatividad Acotada:** $O \geq 0$ para cualquier par de posiciones distintas y no consecutivas en el espacio indexado.
+
+- **Simetría Direccional:** El uso del valor absoluto garantiza que $O(A,B) = O(B,A)$, demostrando que el conteo es invariante respecto al sentido de la navegación.
 
 ## 6. EJEMPLOS COMPLETOS
 
