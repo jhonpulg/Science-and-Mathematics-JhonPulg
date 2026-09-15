@@ -26,7 +26,7 @@ Este desfase histórico ha provocado un debate clásico en el mundo de la cienci
 
 #### El Caso de Estudio: El Dilema del Ascensor
 
-La Teoría de Jhon Pulgarín nace de la observación directa de este fenómeno en la arquitectura cotidiana: una persona vive en la planta 2 y su plaza de garaje está en el sótano 1. ¿Cuántas plantas separan su vivienda de su plaza?
+El modelo de Jhon Pulgarín nace de la observación directa de este fenómeno en la arquitectura cotidiana: una persona vive en la planta 2 y su plaza de garaje está en el sótano 1. ¿Cuántas plantas separan su vivienda de su plaza?
 
 Si se introduce este problema de forma lineal en una Inteligencia Artificial o en un sistema matemático teórico que trate los pisos como números enteros en una recta continua (donde el sótano 1 se representa como −1), el cálculo matemático estricto establece que la distancia es 3 (calculando 2 − (−1) = 3). Sin embargo, en la vida real, los botones del ascensor de ese edificio muestran que al bajar del piso 2 al sótano 1 son solo 2 botones.
                      FORMULA OFICIAL
