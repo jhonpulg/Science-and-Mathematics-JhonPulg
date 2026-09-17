@@ -103,7 +103,7 @@ To avoid "phantom floors", we assign real consecutive indices:
 
 - **Floor A (origin):** Floor 2 → index $2$
 - **Floor B (destination):** Basement 1 → index $0$
-  *(Note: The intermediate Floor 1 occupies index $1$)*
+  *(Note: The intermediate Floor 1 occupies index 1)*
 
 ##### Formula and development
 
