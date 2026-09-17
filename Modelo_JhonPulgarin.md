@@ -103,7 +103,7 @@ Para evitar "pisos fantasma", asignamos índices consecutivos reales:
 
 - **Piso A (origen):** Piso 2 → índice $2$
 - **Piso B (destino):** Sótano 1 → índice $0$
-  *(Nota: El Piso 1 intermedio ocupa el índice $1$)*
+  *(Nota: El Piso 1 intermedio ocupa el índice 1)*
 
 ##### Fórmula y desarrollo
 
